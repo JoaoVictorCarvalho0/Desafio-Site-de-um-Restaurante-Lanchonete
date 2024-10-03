@@ -20,7 +20,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 
 nav ul li {
@@ -32,8 +32,21 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    color: #6b6b6b;
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+}
+
 h1 {
     margin-bottom: 20px;
+}
+
+.card-cardapio {
+    max-width: 50%;
+    height: 50%;
 }
 
 section {
@@ -45,6 +58,9 @@ table {
     margin: 20px auto;
     width: 80%;
     border-collapse: collapse;
+}
+table > tbody > tr > td > img {
+    max-width: 100px;
 }
 
 table, th, td {
@@ -70,7 +86,7 @@ form input, form textarea, form button {
 
 footer {
     text-align: center;
-    padding: 1px;
+    padding: 10px;
     background-color: #333;
     color: #fff;
     position: fixed;
@@ -78,12 +94,21 @@ footer {
     width: 100%;
 }
 
+footer > p {
+    padding: 5px 0px 5px 0px;
+}
+
+footer > img {
+    border-radius: 20px;
+    margin-left: 5px;
+}
+
 .whatsapp-button {
     background-color: #25d366;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .social-buttons button {
@@ -95,3 +120,19 @@ footer {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* Ajuste para tornar a logo redonda e posicioná-la */
+.logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: 150px; /* Tornar a logo quadrada para aplicar border-radius */
+    border-radius: 50%; /* Torna a imagem circular */
+    position: absolute;
+    top: 20px; /* Ajuste conforme o espaço que deseja do topo */
+    left: 20px; /* Ajuste conforme o espaço que deseja da esquerda */
+    object-fit: cover; /* Ajusta a imagem para cobrir a área de forma proporcional */
+    background-color: #fff; /* Se a imagem não for transparente, coloque um fundo branco */
+    border: 5px solid #ccc; /* Adicione uma borda opcional */
+}
+
+
+
