@@ -14,6 +14,7 @@ header {
     background-color: #333;
     color: #fff;
     padding: 15px 0;
+    position: relative; /* Para garantir que a logo absoluta esteja dentro do header */
     text-align: center;
 }
 
@@ -21,6 +22,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: right;
+    margin-right: 20px; /* Espaçamento do menu para o lado direito */
 }
 
 nav ul li {
@@ -44,14 +46,14 @@ h1 {
     margin-bottom: 20px;
 }
 
-.card-cardapio {
-    max-width: 50%;
-    height: 50%;
-}
-
 section {
     padding: 20px;
     text-align: center;
+}
+
+.card-cardapio {
+    max-width: 50%;
+    height: 50%;
 }
 
 table {
@@ -59,6 +61,7 @@ table {
     width: 80%;
     border-collapse: collapse;
 }
+
 table > tbody > tr > td > img {
     max-width: 100px;
 }
@@ -121,18 +124,25 @@ footer > img {
     cursor: pointer;
 }
 
-/* Ajuste para tornar a logo redonda e posicioná-la */
+/* Ajuste para tornar a logo redonda e posicioná-la no canto superior esquerdo */
 .logo {
-    width: 150px; /* Ajuste o tamanho conforme necessário */
-    height: 150px; /* Tornar a logo quadrada para aplicar border-radius */
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 100px; /* Tornar a logo quadrada para aplicar border-radius */
     border-radius: 50%; /* Torna a imagem circular */
-    position: absolute;
-    top: 20px; /* Ajuste conforme o espaço que deseja do topo */
-    left: 20px; /* Ajuste conforme o espaço que deseja da esquerda */
+    position: absolute; /* Posiciona a logo de forma absoluta */
+    top: 2px; /* Distância do topo */
+    left: 5px; /* Distância da esquerda */
     object-fit: cover; /* Ajusta a imagem para cobrir a área de forma proporcional */
-    background-color: #fff; /* Se a imagem não for transparente, coloque um fundo branco */
-    border: 5px solid #ccc; /* Adicione uma borda opcional */
+    background-color: #fff; /* Fundo branco para bordas não transparentes */
+    border: 5px solid #ccc; /* Borda opcional */
 }
 
+header img {
+    max-width: 150px;
+    height: auto;
+}
 
-
+/* Ajusta o conteúdo principal para não sobrepor a logo */
+header h1 {
+    margin-left: 130px; /* Ajusta o título para não sobrepor a logo */
+}
